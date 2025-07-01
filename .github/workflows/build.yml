@@ -21,7 +21,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build SyncTERM AppImage
         run: |
-          wget https://gitlab.synchro.net/main/sbbs/-/archive/master/sbbs-master.zip?path=src -O src.zip
+          wget https://gitlab.synchro.net/main/sbbs/-/archive/master/sbbs-master.zip?path=src -O syncterm-src.zip
           tar xvzf syncterm-src.tgz
           cd syncterm-*/src/syncterm
           st_path=$(pwd | sed 's/\/syncterm$//g')
