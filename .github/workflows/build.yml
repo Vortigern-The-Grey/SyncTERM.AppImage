@@ -21,13 +21,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build SyncTERM AppImage
         run: |
-          wget https://gitlab.synchro.net/main/sbbs/-/archive/master/sbbs-master.zip?path=src -O syncterm-src.zip
-          unzip syncterm-src.zip
-          ls
-          cd sbbs-master/src/syncterm
-          st_path=$(pwd | sed 's/\/syncterm$//g')
-          sudo make SRC_ROOT=$st_path
-          sudo make install
+          curl -s https://erb.pw/get-syncterm.sh | bash
           mkdir -p appdir/usr/bin ; cp ../../src/syncterm/gcc.linux.x64.exe.debug/syncterm appdir/usr/bin/
           strip appdir/usr/bin/syncterm
           mkdir -p appdir/usr/share/applications ; cp ../../src/syncterm/syncterm.desktop appdir/usr/share/applications/
