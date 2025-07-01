@@ -22,7 +22,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build SyncTERM using Script
-        run: ./script.sh
+        run: bash script.sh
       
       - name: Build AppImage
         uses: AppImageCrafters/build-appimage-action@master
