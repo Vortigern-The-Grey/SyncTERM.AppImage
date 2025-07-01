@@ -22,7 +22,7 @@ jobs:
       - name: Build SyncTERM AppImage
         run: |
           wget https://gitlab.synchro.net/main/sbbs/-/archive/master/sbbs-master.zip?path=src -O syncterm-src.zip
-          tar xvzf syncterm-src.tgz
+          unzip syncterm-src.zip
           cd syncterm-*/src/syncterm
           st_path=$(pwd | sed 's/\/syncterm$//g')
           sudo make SRC_ROOT=$st_path
