@@ -59,8 +59,7 @@ make SRC_ROOT=$st_path
 
 # Install SyncTerm
 echo "Install SyncTERM..."
-mkdir ~/AppDir
-sudo make install DESTDIR=~/AppDir
+sudo make install DESTDIR=AppDir
 
 # Find out where Syncterm was installed
 echo "Find out where SyncTERM installed"
