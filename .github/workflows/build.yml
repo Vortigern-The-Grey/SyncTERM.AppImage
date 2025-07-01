@@ -23,7 +23,8 @@ jobs:
         run: |
           wget https://gitlab.synchro.net/main/sbbs/-/archive/master/sbbs-master.zip?path=src -O syncterm-src.zip
           unzip syncterm-src.zip
-          cd syncterm-*/src/syncterm
+          ls
+          cd sbbs-master/src/syncterm
           st_path=$(pwd | sed 's/\/syncterm$//g')
           sudo make SRC_ROOT=$st_path
           sudo make install
